@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="login-container">
+    <div class="login">
+        <form action="" method="POST" >
+            {% csrf_token %}
+            {{mf.as_p}}
+            <input type="submit" value="Login" class="login-button">
+        </form>
+        <br>
+        <br>
+    </div>
+</div>
+{% comment %} <a href="{% url "signup" %}"><input type="button" value="Sign up" class="a"></a> {% endcomment %}
+
+
+{% endblock content %}
+
+
+
+
+
+

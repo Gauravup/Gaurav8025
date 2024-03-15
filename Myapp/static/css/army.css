@@ -1,0 +1,206 @@
+.navbar-light {
+    background-color: rgba(106, 196, 23, 0.811) !important;
+    border: none !important;
+    border-width:0!important;
+}
+
+.card-img-top {
+    height: 300px;
+}
+
+.address{
+ color: rgb(252, 255, 249);
+ text-shadow: 1px 1px 2px black;
+ text-align: center;
+ background-color: rgb(124, 151, 147);
+ border: 1px solid;
+ margin-top: 2px;
+ margin-bottom: 2px;
+ /* background-image: url("{% static "static/army/extraimages/phone-2280940.jpg" %}"); */
+}
+
+
+.register{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 500px;
+    background-color: rgb(124, 151, 147);
+    border-radius: 20px;
+  }
+  
+.register-button{
+    color: black;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+  }
+  
+.register-heading{
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+.register-button{
+    width: 270px;
+  }
+  
+.profile{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+    
+  }
+  
+ 
+.change-password{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 500px;
+  background-color: rgb(124, 151, 147);
+  border-radius: 20px;
+  margin-right: 50px;
+  }
+  
+  
+.profile-form{
+    margin-top: 20px;
+    width: 500px;
+    background-color: rgb(124, 151, 147);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    
+  }
+
+.welcome{
+  text-shadow: 3px 3px 3px rgb(223, 12, 181);
+}
+
+.login-container{
+  margin-top: 20px;
+  margin-left: 38%;
+  border: 5px solid blue;
+  border-width: 10px;
+  width: 350px;
+  height: 250px;
+  background-color: aqua;
+  border-radius: 20px;
+}
+
+.login{
+  margin-left: 15px;
+  margin-top: 19px;
+  
+}
+
+
+.login-button{
+  margin-left: 80px;
+  width: 110px;
+  background-color: aqua;
+  border-color: brown;
+  border-radius: 20px;
+}
+.login-button:hover{
+  background-color: red;
+}
+
+
+.register{
+  margin-top: 40px;
+  width: 350px;
+  background-color: rgb(245, 229, 10);
+  border-radius: 20px;
+}
+
+.register-button{
+  margin-bottom: 20px;
+}
+
+.register-heading{
+  margin-top: 20px;
+}
+
+.register-button{
+  width: 270px;
+}
+
+.footer-body{
+  margin-top: 30px;
+}
+
+.user-profile{
+  margin-right: 40%;
+}
+
+.contact-container{
+  border: 5px solid gold;
+  width: 450px;
+  margin-left: 32%;
+  margin-top: 15px;
+  height: 250px;
+  background-color: yellowgreen;
+  border-radius: 40px;
+}
+
+.contact{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.contact-button:hover{
+  background-color: red;
+}
+
+.contact-button{
+  background-color: yellowgreen;
+  border: 2px solid green;
+  border-radius: 4px;
+}
+
+.profile-container{
+  border: 5px solid yellowgreen;
+  border-radius: 30px;
+  width:470px ;
+  margin-top: 20px;
+  margin-left: 32%;
+  background-color: aqua;
+}
+.profile{
+  text-align: center;
+}
+.logout-button{
+  background-color: aqua;
+  border-radius: 4px;
+}
+
+.logout-button:hover{
+  background-color: red;
+}
+
+.drop{
+  background-color: rgba(123, 196, 54, 0.811) ;
+  border: 0px;
+  border-radius: 9px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 1.3s ease;
+ 
+}
+
+
+.body-1{
+  margin-right: 650px;
+}
+
+.card-add:hover{
+  background-color: red;
+  width: 150px;
+  border-radius: 15px;
+  
+}
+
+
+
+                     

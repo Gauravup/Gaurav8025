@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %}Titan Categories{% endblock title %}
+
+{% block content %}
+
+
+
+<!--  End titan Categories-->
+<div class="container  " style="margin-left: 5px;">
+  <div class="row ">
+      {% for dc in noise_category %}
+    <div class="col-sm-3 mb-3 mt-3 ml-5" style="margin-left: 19px; width: 280px;">
+      <div class="card" style="width: 18rem; ;">
+        <img src="{{dc.Watch_image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{dc.name}}</h5>
+          <h5 class="font-weight-bold text-dark "><i class="fa-solid fa-indian-rupee-sign"></i>{{dc.selling_price}} <small class="fw-light rupee">{{dc.discounted_price}}</small> <small class="text-danger">( % off)</small></h5> 
+          <a href="{% url "watchdetails" dc.id %}" class="btn btn-primary">Add To Cart <i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+      
+       
+ 
+   
+{% comment %} {% url 'addtocart' Watch.id %} {% endcomment %}
+        
+         
+           
+  
+
+
+{% endblock content %}
+

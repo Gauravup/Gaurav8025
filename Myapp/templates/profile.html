@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="profile-container">
+    <div class="profile">
+    <h3>Welcome Mr.{{user.username}}</h3>
+    <br>
+    <br>
+    <a href="{% url "logout" %}"><input type="button" value="logout" class="logout-button"></a>
+
+    </div>
+</div>
+
+{% endblock content %}
+
+
