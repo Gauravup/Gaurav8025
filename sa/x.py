@@ -1,1 +1,3 @@
-print(22 + '12' + 400)
+print(22 + 400)
+
+print('hello world')
