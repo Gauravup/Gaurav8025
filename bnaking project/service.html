@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Our service</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-repeat: no-repeat;
+            display: flex;
+            background-color: blanchedalmond;
+        }
+        h3{
+            height: 30px;
+            width: 150px;
+            border: 3px solid rgb(159, 203, 93);
+            border: none;
+            box-shadow: 5px 3px 6px;
+            border-radius: 8px;
+            margin-left: 490px;
+            text-align: center;
+        }
+        .main{
+            /* margin-left: 200px; */
+            margin-top: 100px;
+           
+            height: 390px;
+            width: 1200px;
+            border: 3px solid orange;
+            border-radius: 15px;
+            background: linear-gradient(yellow,green,orange);
+
+            
+        }
+        .body{
+            margin-left: 70px;
+            margin-top: 90px;
+        }
+        a{
+            text-decoration: none;
+        }
+        button{
+            height: 50px;
+            background: linear-gradient(red , aquamarine, yellow);
+            border-radius: 15px;
+            box-shadow: 3px 2px red;
+            border-color: rgb(166, 19, 83);
+            margin-left: 100px;
+            cursor: pointer;
+            
+        }
+        button:hover{
+            width: 110px;
+            box-shadow: 5px 2px rgb(98, 237, 23);
+            background: scroll;
+        }
+        h1{
+            text-align: center;
+            margin-top: 30px;
+            color: rgb(0, 255, 225);
+            background:scroll;
+            
+        }
+        #exit{
+            margin-left: 480px;
+            width: 120px;
+            margin-top: 5px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h3>Our Services</h3>
+        <div class="body">
+           
+            <button><a href="credite.html"><b>Credite money</b></a></button>
+            <button><a href="debite.html"><b>Debit amount</b></a></button>
+            <button><a href="balance.html"><b>Check balance</b></a></button>
+            <button><a href=""><b>Loan process</b></a></button>
+            <!-- <button><a href=""><b>Get card</b></a></button> -->
+        </div>
+        <h1>Thank You ❤️</h1>
+        <button id="exit" onclick="exit()"><a href="main.html"><b>Exit</b></a></button>
+    </div>
+</body>
+<script>
+    function exit(){
+        confirm('Sure you want to Exit')
+    }
+</script>
+</html>
+

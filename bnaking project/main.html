@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Management System</title>
+    <style>
+        body{
+            margin: 1px;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-repeat: no-repeat;
+            display: flex;
+            
+        }
+       
+
+        .nav{
+            height: 35px;
+            width: 1204px;
+            border: 3px solid rgb(16, 66, 195);
+            border-radius: 5px;
+            background-color: rgb(78, 67, 74);
+            display: flex;
+            background: fixed;
+            background: linear-gradient(red , green, yellow);
+            
+           
+            
+        }
+        .nav a{
+            text-decoration: none; /* Remove underlines from links */
+            margin-left: 15px;
+            border: 2px solid rgb(5, 10, 19);
+            border-radius: 5px;
+            background-color: aquamarine;
+            height: fit-content;
+            width: 140px;
+            text-align: center;
+            margin-top: 6px;
+         }
+        #name{
+            margin-left: 50px;
+            color: rgb(204, 20, 20);
+            border: 2px solid rgb(5, 10, 19);
+            border-radius: 3px;
+            background-color: aquamarine;
+            width: 250px;
+            text-align: center;
+            height: 25px;
+            margin-top: 3px;
+        }
+        a:hover{
+            background-color: red;
+            width: 200px;
+            border-color: greenyellow;
+            border-style: hidden;
+            height: 20px;
+            margin-top: 10px;
+        }
+        img{
+            width: 1210px;
+            height: 540px;
+        }
+        .card-s{
+            border: 3px solid red;
+            width: 1210px;
+            height: 360px;
+            background: linear-gradient(red , green, yellow);
+        }
+        .card{
+            display: flex;
+            height: 350px;
+            width: 250px;
+            border: 3px solid green;
+            border-radius: 5px;
+            float: left;
+            margin-left: 40px;
+            margin-top: 2px;
+        }
+       .card-body{
+        height: 200px;
+        width: 290px;
+        /* border: 3px solid red; */
+       }
+       #img{
+        width: 250px;
+        height: 200px;
+       }
+       button{
+        margin-left: 85px;
+        background-color: blueviolet;
+        cursor: pointer;
+       }
+       button:hover{
+        width: 120px;
+        background-color: brown;
+        border-color: aliceblue;
+        border-radius: 13px;
+       }
+      
+       .footer{
+        height: 150px;
+        width: 1200px;
+        border: 3px solid red;
+        text-align: center;
+        background: linear-gradient(yellow , orange, green);
+        
+       }
+       h2{
+            height: 30px;
+            width: 200px;
+            border: 3px solid rgb(159, 203, 93);
+            border: none;
+            box-shadow: 5px 3px 6px;
+            border-radius: 8px;
+            margin-left: 480px;
+            margin-top: 30px;
+       }
+
+    </style>
+</head>
+<body>
+   
+
+
+
+    <div class="bank">
+        <div class="nav">
+        
+            <a href="#" id="home">HOME</a>
+            <a href="service.html">SERVICES</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="#">ACCOUNT</a>
+            <a href="log.html">Login</a>
+            <span id="name"><b>welcome User</b></span>
+            
+        </div>
+        <div class="image">
+           <img src="image/image3.avif" alt="">
+        </div>
+       <div class="card-s">
+        <div class="card">
+            <div class="card-body">
+                <img src="image/personal-loann.jpg" alt="" id="img">
+                <div class="card-text">
+                    <p>A personal loan is a type of unsecured loan that you can use for a variety of
+                         personal expenses, 
+                        such as consolidating debt, financing a large purchase,
+                         covering medical expenses, or funding a wedding. </p>
+                    <!-- <button>button</button> -->
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <img src="image/homeloan.webp" alt="" id="img">
+                <div class="card-text">
+                    <p>A home loan, also known as a mortgage, is a loan taken out to purchase or maintain a home, 
+                        land. The borrower agrees
+                         to pay the lender over time, typically in a series of regular payments that are divided into principal and interest.</p>
+                    <!-- <button>button</button> -->
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <img src="image/Gold-Loans.jpg" alt="" id="img">
+                <div class="card-text">
+                    <p>A gold loan is a type of secured loan where you pledge your gold jewelry or ornaments as
+                         collateral to borrow money from a lender. 
+                        The amount you can borrow is typically a percentage of the gold's current market value.</p>
+                    <!-- <button>button</button> -->
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <img src="image/car.webp" alt="" id="img">
+                <div class="card-text">
+                    <p>A car loan is a type of secured loan specifically designed to help 
+                        individuals purchase a vehicle. The car itself serves as collateral for the loan.</p>
+                    <!-- <button>button</button> -->
+                </div>
+            </div>
+        </div>
+       </div>
+        <div class="footer">
+           <p><b>Please Visit our banking project </b></p>
+           <h2>Thank You ❤️</h2>
+        </div>
+    </div>
+    
+
+
+</body>
+<script>
+      // code for show data which is store in localstorage
+    function getName(){
+        var name = localStorage.getItem("name");
+
+        document.getElementById('name').innerHTML=(name)
+    }
+    
+ getName();
+   
+</script>
+</html>

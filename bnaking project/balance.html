@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Enquary</title>
+</head>
+<body>
+    
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-repeat: no-repeat;
+            display: block;
+            background-color: rgb(234, 175, 99);
+        }
+        h2{
+            height: 30px;
+            width: 350px;
+            border: 3px solid rgb(159, 203, 93);
+            border: none;
+            box-shadow: 5px 3px 6px;
+            border-radius: 8px;
+            margin-left: 400px;
+            text-align: center;
+        }
+        .credite{
+            height: 350px;
+            width: 1215px;
+            border: 2px solid green;
+            text-align: center;
+            background: linear-gradient(orange , yellow,green);
+            border-radius: 15px;
+            margin-top: 80px;
+        }
+        #nameInput{
+            margin-top: 68px;
+            height: 30px;
+            width: 450px;
+            background: scroll;
+            border-radius: 35px;
+            text-align: center;
+            border-color: rgb(203, 12, 133);
+            border: 3px solid rgb(203, 12, 133);
+
+        }
+        button{
+            height: 30px;
+            width: 250px;
+            border-radius: 25px;
+            box-shadow: 5px 3px 4px;
+            background-color: aquamarine;
+            cursor: pointer;
+        }
+        #displayBalance{
+           
+            height: 30px;
+            width: 200px;
+            border: 3px solid rgb(159, 203, 93);
+            border: none;
+            box-shadow: 5px 3px 6px;
+            border-radius: 8px;
+            margin-left: 30px;
+            
+        }
+        .done{
+           height: 30px;
+           width: 300px;
+           border: 3px solid rgb(159, 203, 93);
+           border: none;
+           box-shadow: 5px 3px 6px;
+           border-radius: 8px;
+           margin-left: 450px;
+           
+       }
+        
+    </style>
+</head>
+<body><h2>Check Your Bank Balance</h2>
+    <div class="service">
+        <div class="srevice-body">
+            <div class="credite">
+                <input type="text"  placeholder="Enter your name"  name="nameInput" id="nameInput" ><br><br>
+                <button onclick="add()">check balance</button> 
+                <p id="displayBalance"></p>
+                <p class="done"><b>Waiting for your Response</b></p>
+            </div>
+        </div>
+
+        <script>
+            function add(){
+                var name = localStorage.getItem("name");
+                var name1 = document.getElementById("nameInput").value;
+                if (name1 === name){
+                    var balance = localStorage.getItem('balance')
+                    document.getElementById("displayBalance").innerHTML=('Your Balance is'+ '  ' + balance)
+                }
+              
+            }
+            add();
+
+
+
+
+
+
+
+    //         function getName(){
+    //     var name = localStorage.getItem("name");
+
+    //     document.getElementById('name').innerHTML=(name)
+    // }
+    // getName();
+        </script>
+  
+</body>
+</html>

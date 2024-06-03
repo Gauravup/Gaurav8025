@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(176, 214, 38);
+        }
+            
+        .acc-body{
+            height: 550px;
+            width: 1215px;
+            border: 2px solid green;
+            text-align: center;
+            background: linear-gradient(orange , yellow,green);
+            border-radius: 15px;
+            margin-top: 20px;
+            
+            
+        }
+        
+        .tittle{
+            height: 50px;
+            width: 550px;
+            border: 3px solid rgb(159, 203, 93);
+            border: none;
+            box-shadow: 5px 3px 6px;
+            border-radius: 8px;
+            margin-left: 300px;
+            text-align: center;
+            margin-top: 0px;
+        }
+        p{
+            height: 30px;
+            width: 350px;
+            border: 3px solid rgb(159, 203, 93);
+            border: none;
+            box-shadow: 5px 3px 6px;
+            border-radius: 8px;
+            margin-left: 400px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        input{
+            height: 30px;
+            width: 350px;
+            border: 3px solid rgb(159, 203, 93);
+            border: none;
+            box-shadow: 5px 3px 6px;
+            border-radius: 8px;
+            margin-left: -60px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        button{
+            height: 30px;
+            width: 150px;
+            border-radius: 25px;
+            box-shadow: 5px 3px 4px;
+            background: aquamarine;
+            margin-top: 20px;
+            margin-right: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="acc-str">
+        <div class="acc-body">
+            <div class="tittle"><marquee behavior="alternate" direction=""> <h2>Create Account Here</h2></marquee></div>
+           <div class="detail">
+            <p>Name</p>
+            <input type="text" name="nameInput" id="nameInput">
+            <p> Email</p>
+            <input type="email" name="emailInput" id="emailInput">
+            <p>Contact Number</p>
+            <input type="text" name="numberInput" id="numberInput">
+
+           </div>
+           <button onclick="saveName()">save</button>
+
+        </div>
+    </div>
+</body>
+<script>
+    // Function to save the name to local storage
+    function saveName() {
+        // Get the value of the input field for the name
+        var name = document.getElementById("nameInput").value;
+        var email = document.getElementById("emailInput").value;
+        var number = document.getElementById("numberInput").value;
+
+        // Save the name to local storage
+        localStorage.setItem("name", name);
+        localStorage.setItem("email", email);
+        localStorage.setItem("number", number);
+
+        window.location.href = "main.html";
+
+        
+        // this code is for blank the input field after save button call
+        document.getElementById("nameInput").value = "";
+        document.getElementById("emailInput").value = '';
+        document.getElementById("numberInput").value = '';
+    }
+
+    // Function to retrieve the name from local storage
+    function getName() {
+        // Retrieve the name from local storage
+        var name = localStorage.getItem("name");
+
+        // Display the name if it exists
+        if (name) {
+            document.getElementById("nameInput").value = name;
+        }
+    }
+
+    // Call getName function when the page loads to populate the input field if the name is already saved
+    window.onload = function() {
+        getName();
+    };
+</script>
+
+</html>

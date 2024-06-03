@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-repeat: no-repeat;
+            display: block;
+            background-color: rgb(234, 175, 99);
+        }
+        h2{
+            height: 30px;
+            width: 350px;
+            border: 3px solid rgb(159, 203, 93);
+            border: none;
+            box-shadow: 5px 3px 6px;
+            border-radius: 8px;
+            margin-left: 400px;
+            text-align: center;
+        }
+        .debit{
+            height: 350px;
+            width: 1215px;
+            border: 2px solid green;
+            text-align: center;
+            background: linear-gradient(orange , yellow,green);
+            border-radius: 15px;
+            margin-top: 80px;
+        }
+        #debit{
+            margin-top: 68px;
+            height: 30px;
+            width: 450px;
+            background: scroll;
+            border-radius: 35px;
+            text-align: center;
+            border: 3px solid rgb(203, 12, 133);
+            
+
+        }
+        button{
+            height: 30px;
+            width: 250px;
+            border-radius: 25px;
+            box-shadow: 5px 3px 4px;
+            background-color: aquamarine;
+            cursor: pointer;
+        }
+        #displayBalance{
+           
+            height: 30px;
+            width: 200px;
+            border: 3px solid rgb(159, 203, 93);
+            border: none;
+            box-shadow: 5px 3px 6px;
+            border-radius: 8px;
+            margin-left: 30px;
+            
+        }
+        .done{
+           height: 30px;
+           width: 300px;
+           border: 3px solid rgb(159, 203, 93);
+           border: none;
+           box-shadow: 5px 3px 6px;
+           border-radius: 8px;
+           margin-left: 450px;
+           
+       }
+        
+    </style>
+</head>
+<body><h2>Confirm to Debit</h2>
+    <div class="service">
+        <div class="srevice-body">
+            <div class="debit">
+                <input type="text"  placeholder="Enter your ammount in Rupees"  id="debit" ><br><br>
+                <button onclick="add()">Debit money</button> 
+                <p id="displayBalance"></p>
+                <p class="done"><b>Waiting for your Response</b></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // var balance = 10000;
+    // function add(){
+    //     var amm = document.getElementById('debit').value;
+    //     balance -= Number(amm)
+    //     document.getElementById('displayBalance').textContent = 'Balance: ' + balance + '💲';
+    //     if (amm > 0) {
+    //         document.getElementsByClassName('done')[0].textContent = ' Collect your Cash';
+    //     }
+    // }
+    
+    // add();
+    function add() {
+    // Get the entered amount
+    var amount = document.getElementById("debit").value;
+    
+    // Retrieve existing balance from local storage or set to 0 if not present
+    var balance = localStorage.getItem("balance") || 0;
+    
+    // Add the entered amount to the balance
+    balance = parseInt(balance) - parseInt(amount);
+    if(amount>0){
+        document.getElementsByClassName('done')[0].textContent = 'Debited Amount Successfully'
+    }
+    
+    // Update the balance in local storage
+    localStorage.setItem("balance", balance);
+    
+    // Display the updated balance
+    document.getElementById("displayBalance").innerText = "Balance = " + balance;
+}
+
+// Function to retrieve and display balance from local storage
+function displayBalance() {
+    // Retrieve balance from local storage
+    var balance = localStorage.getItem("balance");
+    
+    // Display the balance
+    document.getElementById("displayBalance").innerText = "Balance = " + balance;
+}
+
+// Call displayBalance function when the page loads to show the initial balance
+window.onload = displayBalance;
+
+
+   
+</script>
+</html>
